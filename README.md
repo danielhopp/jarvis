@@ -1,7 +1,9 @@
 # Jarvis
 Visual playground for [LM](https://en.wikipedia.org/wiki/Language_model) conversations on nested objects using the [OpenAI API](https://openai.com/api/)
 
-![](screenshot.png)
+[![Jarvis demo](screenshot.png)](https://youtu.be/H9257HeQyW8)
+
+Read more on Medium: https://medium.com/@danielhopp/jarvis-67ff498e34d6
 
 ## Installation
 
