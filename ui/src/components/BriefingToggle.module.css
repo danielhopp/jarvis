@@ -1,0 +1,6 @@
+@import '#root/theme.css';
+
+.showBriefing {
+  border-color: $engineHoodColor !important;
+  color: $engineHoodColor !important;
+}

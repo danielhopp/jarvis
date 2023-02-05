@@ -1,0 +1,32 @@
+@import '#root/theme.css';
+
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: $toolbarBorderSize;
+  margin-top: $toolbarBorderSize;
+
+  button,
+  input,
+  select {
+    margin-right: 0.5em;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  & > div {
+    margin: 0;
+    padding: $padding;
+    background: $controlsBackground;
+    margin-right: $toolbarBorderSize;
+    margin-bottom: $toolbarBorderSize;
+    flex: 1;
+    display: flex;
+  }
+}
+
+.showJson {
+  border-color: $engineHoodColor !important;
+  color: $engineHoodColor !important;
+}

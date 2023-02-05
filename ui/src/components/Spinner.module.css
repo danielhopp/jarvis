@@ -1,0 +1,30 @@
+/*
+Source: https://raw.githubusercontent.com/mhnpd/react-loader-spinner/master/src/loader/InfinitySpin.tsx
+*/
+
+$len: 120px;
+$time: 2s;
+
+.root {
+  width: 100px;
+  svg > g:first-child > path {
+    stroke-dasharray: calc(0.01 * $len), $len;
+    stroke-dashoffset: 0;
+    animation: spin $time linear infinite;
+  }
+}
+
+@keyframes spin {
+  12.5% {
+    stroke-dasharray: calc(0.14 * $len), $len;
+    stroke-dashoffset: calc(-0.11 * $len);
+  }
+  43.75% {
+    stroke-dasharray: calc(0.35 * $len), $len;
+    stroke-dashoffset: calc(-0.35 * $len);
+  }
+  100% {
+    stroke-dasharray: calc(0.01 * $len), $len;
+    stroke-dashoffset: calc(-0.99 * $len);
+  }
+}

@@ -1,0 +1,27 @@
+[
+  {
+    "id": 0,
+    "name": "canvas",
+    "children": [
+      {
+        "id": 2,
+        "name": "box2",
+        "children": [
+          {
+            "id": 3,
+            "name": "apple"
+          }
+        ]
+      },
+      {
+        "id": 1,
+        "name": "box1",
+        "children": []
+      },
+      {
+        "id": 5,
+        "name": "robot"
+      }
+    ]
+  }
+]

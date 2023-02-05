@@ -1,0 +1,42 @@
+@import '#root/theme.css';
+
+.root {
+  display: flex;
+  flex-direction: column;
+  color: $accentColor;
+}
+
+.request {
+}
+
+.response {
+  margin-left: 20%;
+  display: flex;
+  align-self: flex-end;
+  color: $aiColor;
+
+  p,
+  h1,
+  h2,
+  h3 {
+    margin-top: 0;
+  }
+}
+
+.briefing,
+.template,
+.data {
+  color: #fa0dffc9;
+}
+
+.data {
+  line-height: 1;
+}
+
+.notice {
+  color: #fff01f;
+}
+
+.error {
+  color: #ff4f00;
+}

@@ -1,0 +1,46 @@
+{
+  "name": "jarvis-ui",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "engines": {
+    "node": ">=16.0.0 <19.0.0"
+  },
+  "author": "Daniel Hopp <mail@danielhopp.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.1",
+    "axios": "^1.2.5",
+    "classnames": "^2.3.2",
+    "copy-to-clipboard": "^3.3.3",
+    "framer-motion": "^9.0.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-json-pretty": "^2.2.0",
+    "react-markdown": "^8.0.5",
+    "react-nl2br": "^1.0.4",
+    "react-redux": "^8.0.5",
+    "redux": "^4.2.0",
+    "use-deep-compare-effect": "^1.8.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.1",
+    "postcss": "^8.4.21",
+    "postcss-calc": "^8.2.4",
+    "postcss-input-range": "^5.0.0",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "^6.0.0",
+    "postcss-simple-vars": "^7.0.1",
+    "vite": "^4.0.0",
+    "vite-plugin-ejs": "^1.6.4",
+    "vite-plugin-svgr": "^2.4.0"
+  }
+}

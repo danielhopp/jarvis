@@ -1,0 +1,26 @@
+@import '#root/theme.css';
+
+.root {
+  flex: 1;
+  padding: 0;
+  overflow-y: auto;
+  margin: 0.5em;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0.5em 0 0;
+  }
+
+  li {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.thread {
+}
+
+.emptyness {
+  color: $placeholderColor;
+}

@@ -1,0 +1,82 @@
+@import '#root/theme.css';
+
+.root {
+  display: flex;
+  height: 0%;
+  flex: 1;
+  flex-direction: column;
+  background: $controlsBackground;
+  position: relative;
+  border-right: solid #000 $toolbarBorderSize;
+  border-left: solid #000 $toolbarBorderSize;
+}
+
+.textInput {
+  margin-right: $padding;
+  padding: 0 0 0 $padding;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  textarea {
+    height: calc(3em);
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: calc(2 * $padding) 0 $padding 0;
+  align-items: flex-start;
+
+  button {
+    margin: 0;
+  }
+}
+
+.temperature {
+  display: flex;
+  width: 40%;
+
+  input {
+    width: 100%;
+    margin-right: 1em;
+  }
+  label {
+    min-width: 3em;
+  }
+}
+
+.briefing {
+  padding-bottom: 0;
+  display: none;
+
+  textarea {
+    height: 4em;
+    border-bottom: none !important;
+    color: $engineHoodColor !important;
+  }
+}
+
+.showBriefing {
+  .briefing {
+    display: flex;
+  }
+}
+
+.userMessage {
+  padding-top: 0;
+
+  textarea {
+    color: #0defff;
+
+    &:focus {
+      color: #0defff;
+    }
+  }
+}
+
+.showBriefing .userMessage textarea {
+  border-top: dashed $accentColor $inputBorderSize;
+}

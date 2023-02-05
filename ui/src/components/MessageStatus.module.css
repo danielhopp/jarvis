@@ -1,0 +1,39 @@
+@import '#root/theme.css';
+
+.root {
+  margin: 0 0.4em;
+  cursor: help;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+.pending {
+  svg {
+    color: $aiColor;
+    width: 2em !important;
+  }
+}
+
+.checkIcon {
+  background: $aiColor;
+  color: #000;
+  border-radius: 50%;
+  vertical-align: top;
+  margin: 0;
+}
+
+.alertIcon {
+  width: 1.5em !important;
+  height: 1.5em !important;
+}
+
+.notice {
+  color: #fff01f;
+}
+
+.error {
+  color: #ff4f00;
+}

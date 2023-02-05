@@ -1,0 +1,79 @@
+@import '#root/theme.css';
+
+.root {
+  text-transform: uppercase;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  color: $accentColor;
+  font-weight: 600;
+  font-size: 0.8em;
+  line-height: 1;
+  position: relative;
+  height: 100%;
+
+  & > .container {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    border: none;
+    background: transparent;
+    flex-wrap: nowrap;
+
+    & > .contents {
+      padding-bottom: calc(2 * $padding);
+    }
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 0;
+  padding: 0.25em;
+}
+
+.contents {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  padding: calc($padding / 2) $padding 0 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: calc(6em + 1 * $padding);
+  min-height: calc(6em + 2 * $padding);
+  margin: 0 0 $padding $padding;
+  flex-wrap: wrap;
+  background: $boxBackground;
+  border: $objectsBorder;
+
+  & .title {
+    padding: 0.2em;
+  }
+}
+
+.item {
+  border: $objectsBorder;
+  border-radius: 50%;
+  width: $itemSize;
+  height: $itemSize;
+  min-width: $itemSize;
+  min-height: $itemSize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 $padding $padding;
+  background: $itemBackground;
+
+  & .title {
+    max-width: calc($itemSize - $padding);
+    max-height: calc($itemSize - 2.1em);
+    overflow-wrap: break-word;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}

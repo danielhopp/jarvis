@@ -1,0 +1,80 @@
+@import './theme.css';
+
+body {
+  accent-color: $accentColor;
+  color-scheme: dark;
+  background: #000;
+  color: #fff;
+  width: 100%;
+  position: fixed;
+  height: 100%;
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  @mixin jarvis;
+}
+
+.display {
+  background: #000;
+  flex: 1;
+  overflow-y: auto;
+  padding-top: 0.125em;
+
+  h1 {
+    position: absolute;
+    text-transform: none;
+    font-size: 1.2em;
+    margin: 0;
+    left: 0;
+    right: 0;
+    color: $accentColor;
+    text-align: center;
+    opacity: 0.5;
+  }
+}
+
+.canvas {
+  padding: calc(3 * $padding) $padding $padding $padding;
+  background: transparent;
+  height: calc(100% - 4 * $padding);
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 0%;
+}
+
+@media (orientation: landscape) {
+  .root {
+    flex-direction: row;
+  }
+  .display {
+    h1 {
+      right: 50%;
+    }
+  }
+  .controls {
+    height: initial;
+  }
+}
+
+@container (max-width: 1080px) {
+  .root {
+    flex-direction: column !important;
+  }
+  .display {
+    h1 {
+      right: 0;
+    }
+  }
+  .controls {
+    height: 50%;
+  }
+}

@@ -1,0 +1,151 @@
+$accentColor: #07eeff;
+$padding: 0.5em;
+$fontFamily: Inter, Avenir, Helvetica, Arial, sans-serif;
+
+$engineHoodColor: #fa0dffc9;
+$boxBackground: #00ffff29;
+$itemSize: 5em;
+$itemBackground: radial-gradient(
+  circle at 50% 120%,
+  #07eeff 0%,
+  #1c212154 36%,
+  #030d18a8 72%,
+  #07eeff 100%
+);
+$objectsBorder: solid $accentColor 0.1em;
+$controlsBackground: #0df8ff1a;
+$inputBackground: #0000009c;
+$inputBorderSize: 0.12em;
+$inputPaddingVertical: 0.1em;
+$inputPaddingHorizontal: 0.3em;
+$inputPadding: $inputPaddingVertical $inputPaddingHorizontal;
+$highlightColor: #9df8ff;
+$disabledColor: #000;
+$disabledBackground: #3cc9d385;
+$placeholderColor: $disabledBackground;
+$toolbarBorderSize: 0.1em;
+$aiColor: #20ffcb;
+
+@define-mixin jarvis {
+  * {
+    scrollbar-color: #07eeff transparent;
+  }
+
+  body,
+  textarea {
+    font-family: $fontFamily;
+  }
+
+  label {
+    color: $accentColor;
+  }
+
+  button,
+  select,
+  input[type='text'],
+  textarea {
+    padding: $inputPadding;
+    color: $accentColor;
+    background: $inputBackground;
+    border: solid $accentColor $inputBorderSize;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 1;
+
+    &:focus {
+      outline: none;
+      border-color: $highlightColor;
+      color: $highlightColor;
+    }
+
+    &:disabled {
+      border-color: transparent;
+      background: $disabledBackground;
+      color: $disabledColor;
+    }
+  }
+
+  select {
+    width: 7em;
+  }
+
+  textarea {
+    text-transform: none;
+    padding: $inputPaddingHorizontal;
+    resize: none;
+  }
+
+  textarea,
+  input[type='text'] {
+    min-width: 10em;
+    &:focus {
+      outline: none;
+      border-color: $highlightColor;
+    }
+    &::placeholder {
+      color: $placeholderColor;
+    }
+  }
+
+  button {
+    border-radius: 0.3em;
+    user-select: none;
+    transition: transform 100ms ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    &:active {
+      border-color: #3ac3f2;
+    }
+
+    &:disabled {
+      transform: none;
+      border-color: transparent;
+    }
+  }
+
+  input[type='range'] {
+    appearance: none;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  ::range-thumb {
+    box-shadow: none;
+    border: 0.2em solid #08191a;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 1em;
+    background: $accentColor;
+    cursor: pointer;
+    appearance: none;
+    margin-top: calc(-0.75em + 0.2em);
+  }
+
+  ::range-track {
+    width: 100%;
+    height: 0.3em;
+    cursor: pointer;
+    animate: 0.2s;
+    background: $accentColor;
+    border-radius: 0.1em;
+    border: none;
+    box-shadow: none;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.75em;
+    height: 0.75em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #07eeff;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+  }
+}
